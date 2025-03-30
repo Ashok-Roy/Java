@@ -1,0 +1,72 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>WinHubGames</display-name>
+  <servlet>
+     <servlet-name>loader</servlet-name>
+  	<servlet-class>loader.Loader</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  	 </servlet>
+  
+  <servlet>
+  <servlet-name>index</servlet-name>
+  <jsp-file>/index.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  <servlet-name>wait</servlet-name>
+  <jsp-file>/wait.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  <servlet-name>entry</servlet-name>
+  <jsp-file>/landing.jsp</jsp-file>
+  </servlet>
+  
+   <servlet>
+  <servlet-name>prize</servlet-name>
+  <jsp-file>/prize.jsp</jsp-file>
+  </servlet>
+   <servlet>
+   	<servlet-name>BuyTicket</servlet-name>
+   	<display-name>BuyTicket</display-name>
+   	<description></description>
+   	<servlet-class>api.BuyTicket</servlet-class>
+   </servlet>
+   <servlet>
+   	<servlet-name>Redirect</servlet-name>
+   	<display-name>Redirect</display-name>
+   	<description></description>
+   	<servlet-class>api.Redirect</servlet-class>
+   </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>prize</servlet-name>
+  <url-pattern>/prize</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>wait</servlet-name>
+  <url-pattern>/wait</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>index</servlet-name>
+  <url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>entry</servlet-name>
+  <url-pattern>/entry</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BuyTicket</servlet-name>
+  	<url-pattern>/BuyTicket</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Redirect</servlet-name>
+  	<url-pattern>/Redirect</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  <welcome-file>/index.jsp</welcome-file>
+  </welcome-file-list>
+    
+</web-app>

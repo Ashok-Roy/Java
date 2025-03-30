@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <!-- Configure Dependent Bean using setter injection	  -->
+  <bean id="person" class="in.ineuron.bean.Person">
+  	<property name="name" value="Sachin"></property>
+  	<property name="pid" value="101"></property>
+  	<property name="paddress" value="MI"></property>
+  	<property name="income" value="10000.0f"></property>
+  </bean>
+  
+  <!-- Configure Dependent Bean using Constructor injection	  -->
+  <bean id="person1" class="in.ineuron.bean.Person">
+  	<constructor-arg name="name" value="Sachin"></constructor-arg>
+  	<constructor-arg name="pid" value="101"></constructor-arg>
+  	<constructor-arg name="paddress" value="MI"></constructor-arg>
+  	<constructor-arg  name="income" value="10000.0f"></constructor-arg>
+  </bean>
+  
+</beans>

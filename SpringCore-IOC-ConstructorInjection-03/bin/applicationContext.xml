@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configure Dependent Bean using constructor injection -->
+	<bean id="emp" class="in.ineuron.bean.Employee">
+	
+		<!-- Constructor Injection and filled data types using type -->
+		<constructor-arg value="Sachin" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="101"  type="java.lang.Integer"></constructor-arg>
+		<constructor-arg value="10000.00f" type="java.lang.Float"></constructor-arg> 
+		
+		<!-- Constructor Injection and filled data types using index  -->
+		<!-- <constructor-arg value="101" index="0"></constructor-arg>
+		<constructor-arg value="Sachin" index="1"></constructor-arg>
+		<constructor-arg value="10000.00" index="2"></constructor-arg> -->
+
+<!-- we can configure name, type and index but recomended is name-->
+
+	</bean>
+
+
+</beans>

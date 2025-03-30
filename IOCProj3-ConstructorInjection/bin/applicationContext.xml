@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configuring DEPENDANT bean using Setter injection -->
+	<bean id="emp" class="in.ineuron.bean.Employee">
+		<constructor-arg value="MI" name='eaddress'/>
+		<constructor-arg value="sachin"  name='ename'/>
+		<constructor-arg value="3500.05F" name='esalary'/>
+		<constructor-arg value="10"  name='eno'/>
+	</bean>	
+</beans>

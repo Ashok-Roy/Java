@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+   <!-- Configuring the dependent bean  -->
+   <bean id="blueDart" class="in.ineuron.bean.BlueDart" primary="true"/>
+   <bean id="dtdc" class="in.ineuron.bean.DTDC" autowire-candidate="false"/>
+   <bean id="fFlight" class="in.ineuron.bean.FirstFlight" autowire-candidate="false"/>
+   
+   <!-- Configuring the target bean -->
+   <bean id="fpkt" class="in.ineuron.bean.FlipKart" autowire="constructor"> <!-- byName,byType  -->
+   
+   </bean>
+	
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="dob" class="java.util.Date">
+		<property name="year" value="93"></property>
+		<property name="month" value="01"></property>
+		<property name="date" value="12"></property>
+	</bean>
+	<bean id="dom" class="java.util.Date">
+		<property name="year" value="114"></property>
+		<property name="month" value="01"></property>
+		<property name="date" value="12"></property>
+	</bean>
+	<bean id="doj" class="java.util.Date">
+		<property name="year" value="115"></property>
+		<property name="month" value="01"></property>
+		<property name="date" value="12"></property>
+	</bean>
+<!-- Configuring Target Bean -->
+  <bean id="person1" class="in.ineuron.bean.PersonInfo">
+  	<constructor-arg name="pno" value="10"/> 
+  	<constructor-arg name="pname" value="Sachin"/> 
+  	<constructor-arg name="dob" ref="dob"/> 
+  	<constructor-arg name="doj" ref="doj"/> 
+  	<constructor-arg name="dom" ref="dom"/> 
+  </bean>
+  <bean id="person2" class="in.ineuron.bean.PersonInfo">
+  	<constructor-arg name="pno" value="10"/> 
+  	<constructor-arg name="pname" value="Sachin"/> 
+  	<constructor-arg name="dob" ><null/></constructor-arg>
+  	<constructor-arg name="doj" ><null/></constructor-arg>
+  	<constructor-arg name="dom" ref="dom"/> 
+  </bean>
+
+
+</beans>

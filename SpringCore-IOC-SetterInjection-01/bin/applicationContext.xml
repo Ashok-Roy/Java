@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Setter Injection -->
+<!-- Configuration Dependent Bean  id means reference here  -->
+  <bean id="dt" class="java.util.Date">
+    <!-- collaborators and configuration for this bean go here -->
+  </bean>
+
+<!-- Configuring Target Bean -->
+  <bean id="wmg" class="in.ineuron.bean.WishMessageGenerator">
+  		<!-- Target Object configuration  -->
+  		<property name="date" ref="dt"></property>
+  </bean>
+
+
+</beans>

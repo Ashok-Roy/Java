@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Setter Injection supports circular dependency injection -->
+ <!--  <bean id="a1" class="in.ineuron.bean.A">
+  	<property name="b" ref="b1"></property>
+  </bean> -->
+
+<!-- Configuring Target Bean Setter Injection -->
+  <!-- <bean id="b1" class="in.ineuron.bean.B">
+  	<property name="a" ref="a1"></property>
+  </bean> -->
+  
+  
+  <!-- Constructor Injection does not supports circular dependency injection-->
+   <!-- <bean id="a1" class="in.ineuron.bean.A">
+  	<constructor-arg name="b" ref="b1"/>
+  </bean>
+  
+  <bean id="b1" class="in.ineuron.bean.B">
+  	<constructor-arg name="a" ref="a1"/>
+  </bean> -->
+  
+  <!-- First side setter and second is constructor, only work setter one, constructor will not work -->
+  <bean id="a1" class="in.ineuron.bean.A">
+  	<property name="b" ref="b1"></property>
+  </bean>
+  
+   <bean id="b1" class="in.ineuron.bean.B">
+  	<constructor-arg name="a" ref="a1"/>
+  </bean>
+
+
+</beans>
